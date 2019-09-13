@@ -10,7 +10,7 @@ create table if not exists user_account
 	password varchar(255)
 );
 
-alter table user_account owner to postgres;
+alter table user_account owner to usr_gotham;
 
 create table if not exists role
 (
@@ -20,7 +20,7 @@ create table if not exists role
 	role varchar(255)
 );
 
-alter table role owner to postgres;
+alter table role owner to usr_gotham;
 
 create table if not exists team
 (
@@ -36,7 +36,7 @@ create table if not exists team
 	team_name varchar(255)
 );
 
-alter table team owner to postgres;
+alter table team owner to usr_gotham;
 
 create table if not exists user_role
 (
@@ -50,7 +50,7 @@ create table if not exists user_role
 		primary key (id_user, id_role)
 );
 
-alter table user_role owner to postgres;
+alter table user_role owner to usr_gotham;
 
 create table if not exists clock
 (
@@ -64,5 +64,5 @@ create table if not exists clock
 	date_clock_out timestamp
 );
 
-alter table clock owner to postgres;
+alter table clock owner to usr_gotham;
 
